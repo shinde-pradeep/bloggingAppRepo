@@ -1,0 +1,56 @@
+package com.bloggingApp.servicesImpl;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.bloggingApp.entitiesDtos.UsersDto;
+import com.bloggingApp.repositories.UsersRepo;
+import com.bloggingApp.services.UsersService;
+
+public class UsersServiceImpl implements UsersService {
+
+	@Autowired
+    private UsersRepo usersRepo;
+	
+	@Autowired
+	private ModelMapper modelMapper;
+	
+//...........................................................................................	
+	
+//1.createUser.........................	
+	@Override
+	public UsersDto createUser(UsersDto usersDto) {
+
+		Users users=this.modelMapper.map(usersDto,Users.class);
+		UsersDto usersDto2=this.usersRepo.save(users);
+		
+		return null;
+	}
+
+	@Override
+	public UsersDto updateUser(UsersDto usersDto, Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UsersDto getUserById(Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<UsersDto> getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUser(Long userId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

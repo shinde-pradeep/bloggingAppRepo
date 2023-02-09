@@ -1,0 +1,5 @@
+package com.bloggingApp.repositories;
+
+public interface UsersRepo {
+
+}

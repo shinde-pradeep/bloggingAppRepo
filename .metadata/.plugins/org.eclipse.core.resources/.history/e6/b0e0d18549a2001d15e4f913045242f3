@@ -1,0 +1,5 @@
+package com.bloggingApp.services;
+
+public interface UsersService {
+
+}

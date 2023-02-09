@@ -1,0 +1,20 @@
+package com.bloggingApp.services;
+
+import java.util.List;
+
+import com.bloggingApp.entitiesDtos.UsersDto;
+
+
+public interface UsersService {
+
+	UsersDto createUser (UsersDto usersDto);
+	
+	UsersDto updateUser (UsersDto usersDto,Long userId);
+	
+	UsersDto getUserById (Long userId);
+	
+	List<UsersDto> getAllUsers ();
+
+	void deleteUser (Long userId);
+
+}
